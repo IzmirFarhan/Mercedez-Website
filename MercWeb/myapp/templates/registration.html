@@ -1,0 +1,91 @@
+{% extends "index.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+<style>
+    .registration-container {
+        padding: 40px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .registration-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .registration-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .registration-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .registration-form .form-group {
+        margin-bottom: 20px;
+    }
+    .registration-form label {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 5px;
+        display: block;
+    }
+    .registration-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .registration-form button {
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .registration-form button:hover {
+        background-color: #a40016;
+    }
+    .registration-form a {
+        color: #002C54; /* Dark blue */
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .registration-form a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="registration-container">
+    <div class="registration-header">
+        <h1>Register</h1>
+        <p>Create a new account to get started.</p>
+    </div>
+    
+    <form class="registration-form" action="#" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        <button type="submit">Register</button>
+        <a href="login.html">Already have an account? Login here</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<style>
+    .about-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+        color: #002C54; /* Main text color */
+    }
+    .about-section {
+        margin-bottom: 20px;
+    }
+    .about-section h2 {
+        color: #C5001A; /* Red color for section titles */
+        border-bottom: 2px solid #C5001A;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="about-container">
+    <div class="about-section">
+        <h2>About the Website</h2>
+        <p>
+            Welcome to our car website, your go-to destination for exploring and discovering the best Mercedes models. Our platform is dedicated to providing detailed information, comparisons, and insights about the latest and classic Mercedes-Benz vehicles. Whether you're a seasoned car enthusiast or a first-time buyer, we aim to offer you the best resources and tools to make an informed decision.
+        </p>
+    </div>
+
+    <div class="about-section">
+        <h2>Our History</h2>
+        <p>
+            Established in [Year], our website has grown to become one of the most trusted sources for Mercedes-Benz enthusiasts and buyers. We started with a simple goal: to share our passion for Mercedes-Benz with the world. Over the years, we have expanded our offerings to include detailed car reviews, comparison tools, and a comprehensive catalog of both new and used Mercedes models.
+        </p>
+    </div>
+
+    <div class="about-section">
+        <h2>What We Do</h2>
+        <p>
+            Our website is designed to serve as a comprehensive resource for all things Mercedes-Benz. Here’s what we offer:
+        </p>
+        <ul>
+            <li><strong>Car Reviews:</strong> In-depth reviews of the latest Mercedes models.</li>
+            <li><strong>Comparison Tools:</strong> Side-by-side comparisons to help you choose the perfect car.</li>
+            <li><strong>Buyer's Guide:</strong> Expert advice on purchasing new or used Mercedes vehicles.</li>
+            <li><strong>Car Listings:</strong> A wide range of Mercedes cars available for purchase.</li>
+            <li><strong>Community Forum:</strong> A place for Mercedes enthusiasts to discuss and share experiences.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

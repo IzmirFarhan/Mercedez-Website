@@ -1,0 +1,84 @@
+{% extends "index.html" %}
+
+{% block title %}Car Details{% endblock %}
+
+{% block content %}
+<style>
+    .car-details-container {
+        padding: 20px;
+        background-color: #FDF6F6; /* Light background */
+    }
+    .car-details-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .car-details-header h1 {
+        color: #002C54; /* Dark blue */
+    }
+    .car-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    .car-specs, .car-description {
+        margin-bottom: 20px;
+    }
+    .car-specs h2, .car-description h2 {
+        color: #C5001A; /* Red */
+        margin-bottom: 10px;
+    }
+    .car-specs ul {
+        list-style: none;
+        padding: 0;
+    }
+    .car-specs ul li {
+        background-color: #F2F2F2;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .buy-button {
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .buy-button:hover {
+        background-color: #A40016; /* Darker red */
+    }
+</style>
+
+<div class="car-details-container">
+    <div class="car-details-header">
+        <h1>Mercedes S-Class 2024</h1>
+        <button class="buy-button">Buy Now</button>
+    </div>
+    
+    <img src="https://via.placeholder.com/1200x400" alt="Car Image" class="car-image">
+
+    <div class="car-specs">
+        <h2>Specifications</h2>
+        <ul>
+            <li><strong>Make:</strong> Mercedes</li>
+            <li><strong>Model:</strong> S-Class</li>
+            <li><strong>Year:</strong> 2024</li>
+            <li><strong>Mileage:</strong> 5,000 miles</li>
+            <li><strong>Engine:</strong> 4.0L V8</li>
+            <li><strong>Transmission:</strong> Automatic</li>
+            <li><strong>Price:</strong> $100,000</li>
+        </ul>
+    </div>
+
+    <div class="car-description">
+        <h2>About This Car</h2>
+        <p>This 2024 Mercedes S-Class is the epitome of luxury and performance. It features a powerful 4.0L V8 engine and a smooth automatic transmission. The car is equipped with the latest technology and safety features, ensuring a comfortable and secure driving experience. With only 5,000 miles on the odometer, this car is in excellent condition and ready for a new owner.</p>
+    </div>
+</div>
+{% endblock %}

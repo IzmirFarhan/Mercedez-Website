@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<style>
+    .profile-container {
+        padding: 40px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .profile-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .profile-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .profile-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .profile-form .form-group {
+        margin-bottom: 20px;
+    }
+    .profile-form label {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 5px;
+        display: block;
+    }
+    .profile-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .profile-form button {
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .profile-form button:hover {
+        background-color: #a40016;
+    }
+</style>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <h1>Your Profile</h1>
+        <p>Update your profile information below.</p>
+    </div>
+    
+    <form class="profile-form" action="#" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="JohnDoe" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="johndoe@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Leave blank to keep current password">
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+        </div>
+        <button type="submit">Update Profile</button>
+    </form>
+</div>
+{% endblock %}

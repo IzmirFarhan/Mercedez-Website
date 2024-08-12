@@ -1,0 +1,94 @@
+{% extends "index.html" %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<style>
+    .services-container {
+        padding: 20px;
+        background-color: #FDF6F6; /* Light background */
+    }
+    .services-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .services-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .services-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .service-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: #F2F2F2;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .service-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+    .service-item h3 {
+        color: #C5001A; /* Red */
+        margin-bottom: 10px;
+    }
+    .service-item p {
+        color: #333; /* Dark grey */
+    }
+</style>
+
+<div class="services-container">
+    <div class="services-header">
+        <h1>Our Services</h1>
+        <p>We offer a wide range of automotive services to keep your vehicle running smoothly and looking its best.</p>
+    </div>
+    
+    <div class="service-item">
+        <img src="https://via.placeholder.com/150" alt="Service Image">
+        <div>
+            <h3>Car Maintenance & Repair</h3>
+            <p>Our experienced technicians provide comprehensive car maintenance and repair services to ensure your vehicle stays in top condition. From oil changes to brake inspections, we’ve got you covered.</p>
+        </div>
+    </div>
+
+    <div class="service-item">
+        <img src="https://via.placeholder.com/150" alt="Service Image">
+        <div>
+            <h3>Detailing & Cleaning</h3>
+            <p>We offer professional detailing and cleaning services to keep your car looking like new. Our services include exterior washes, interior cleaning, and full detailing packages.</p>
+        </div>
+    </div>
+
+    <div class="service-item">
+        <img src="https://via.placeholder.com/150" alt="Service Image">
+        <div>
+            <h3>Custom Modifications</h3>
+            <p>Enhance your vehicle’s performance and style with our custom modification services. We offer everything from performance upgrades to aesthetic modifications tailored to your needs.</p>
+        </div>
+    </div>
+
+    <div class="service-item">
+        <img src="https://via.placeholder.com/150" alt="Service Image">
+        <div>
+            <h3>Pre-Purchase Inspections</h3>
+            <p>Before you buy a used car, let our experts perform a comprehensive inspection to ensure you’re making a smart investment. We’ll check everything from the engine to the interior.</p>
+        </div>
+    </div>
+
+    <div class="service-item">
+        <img src="https://via.placeholder.com/150" alt="Service Image">
+        <div>
+            <h3>Tire Services</h3>
+            <p>Our tire services include everything from tire rotation and balancing to sales and installation of new tires. We carry a wide selection of tires to fit any vehicle.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

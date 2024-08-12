@@ -1,0 +1,105 @@
+{% extends "index.html" %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<style>
+    .checkout-container {
+        padding: 40px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .checkout-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .checkout-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .checkout-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .checkout-form .form-group {
+        margin-bottom: 20px;
+    }
+    .checkout-form label {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 5px;
+        display: block;
+    }
+    .checkout-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .checkout-form button {
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .checkout-form button:hover {
+        background-color: #a40016;
+    }
+    .checkout-summary {
+        margin-top: 20px;
+    }
+    .checkout-summary h2 {
+        color: #002C54; /* Dark blue */
+    }
+    .checkout-summary p {
+        color: #333; /* Dark grey */
+    }
+</style>
+
+<div class="checkout-container">
+    <div class="checkout-header">
+        <h1>Checkout</h1>
+        <p>Please provide your payment details to complete the purchase.</p>
+    </div>
+    
+    <form class="checkout-form" action="#" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Shipping Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+        <div class="form-group">
+            <label for="payment_method">Payment Method</label>
+            <select id="payment_method" name="payment_method" required>
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select>
+        </div>
+        <button type="submit">Complete Purchase</button>
+    </form>
+
+    <div class="checkout-summary">
+        <h2>Order Summary</h2>
+        <p>Item: Example Car</p>
+        <p>Price: $20,000</p>
+        <p>Shipping: $500</p>
+        <p>Total: $20,500</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django App{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .drawer {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hide the drawer off-screen initially */
+            background-color: #002C54; /* Dark blue color */
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.3s; /* Slide-in animation */
+        }
+        .drawer.open {
+            left: 0; /* Slide in the drawer */
+        }
+        .drawer .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #C5001A; /* Red color */
+            border-bottom: 2px solid #FDF6F6; /* Light background color */
+            color: #fff;
+        }
+        .drawer .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .drawer .profile h4 {
+            margin-bottom: 10px;
+        }
+        .drawer .nav {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            list-style: none;
+        }
+        .drawer .nav .nav-item {
+            margin: 10px 0;
+        }
+        .drawer .nav .nav-link {
+            color: #FDF6F6; /* Light background color */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .drawer .nav .nav-link:hover {
+            background-color: #C5001A; /* Red color */
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+            margin-left: 60px; /* Space for the hamburger icon */
+            background-color: #FDF6F6; /* Light background for content */
+        }
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            color: #002C54; /* Dark blue color */
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+        .hamburger.active {
+            left: 270px; /* Position of the X icon when drawer is open */
+        }
+        .hamburger.active:before {
+            content: "\f00d"; /* FontAwesome X icon */
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+    </div>
+    <div class="drawer">
+        <div class="profile">
+            <img src="https://via.placeholder.com/80" alt="User Image">
+            <h4>User Name</h4>
+            <a href="#" class="btn btn-light">Settings</a>
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="home.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notifications</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.drawer').classList.toggle('open');
+            this.classList.toggle('active');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

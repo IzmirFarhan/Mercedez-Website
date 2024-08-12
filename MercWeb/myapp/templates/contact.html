@@ -1,0 +1,101 @@
+{% extends "index.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<style>
+    .contact-container {
+        padding: 40px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+    }
+    .contact-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .contact-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .contact-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+    .contact-form label {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 5px;
+        display: block;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .contact-form button {
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .contact-form button:hover {
+        background-color: #a40016;
+    }
+    .contact-info {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .contact-info p {
+        color: #333; /* Dark grey */
+        margin-bottom: 10px;
+    }
+    .contact-info a {
+        color: #002C54; /* Dark blue */
+        text-decoration: none;
+    }
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="contact-container">
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out to us using the form below or through our contact details.</p>
+    </div>
+    
+    <div class="contact-form">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p>You can also reach us at:</p>
+        <p>Email: <a href="mailto:info@yourcarwebsite.com">info@yourcarwebsite.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        <p>Address: 123 Car Street, Auto City, CA 90000</p>
+    </div>
+</div>
+{% endblock %}

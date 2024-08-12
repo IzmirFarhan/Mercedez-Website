@@ -1,0 +1,127 @@
+{% extends "index.html" %}
+
+{% block title %}Inventory{% endblock %}
+
+{% block content %}
+<style>
+    .inventory-container {
+        padding: 20px;
+        background-color: #FDF6F6; /* Light background */
+    }
+    .inventory-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .inventory-header h1 {
+        color: #002C54; /* Dark blue */
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .search-bar input[type="text"] {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .search-bar button {
+        padding: 10px 20px;
+        background-color: #C5001A; /* Red */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+    .filter-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .filter-bar select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .inventory-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .inventory-table th, .inventory-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+    .inventory-table th {
+        background-color: #002C54; /* Dark blue */
+        color: #fff;
+    }
+    .inventory-table tr:hover {
+        background-color: #F2F2F2;
+    }
+</style>
+
+<div class="inventory-container">
+    <div class="inventory-header">
+        <h1>Car Inventory</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search by make, model, or year">
+            <button type="button">Search</button>
+        </div>
+    </div>
+    
+    <div class="filter-bar">
+        <select>
+            <option value="">Filter by Make</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select>
+            <option value="">Filter by Model</option>
+            <option value="s-class">S-Class</option>
+            <option value="c-class">C-Class</option>
+            <option value="e-class">E-Class</option>
+        </select>
+        <select>
+            <option value="">Filter by Year</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+    </div>
+
+    <table class="inventory-table">
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Mileage</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mercedes</td>
+                <td>S-Class</td>
+                <td>2024</td>
+                <td>5,000 miles</td>
+                <td>$100,000</td>
+            </tr>
+            <tr>
+                <td>Mercedes</td>
+                <td>C-Class</td>
+                <td>2023</td>
+                <td>10,000 miles</td>
+                <td>$80,000</td>
+            </tr>
+            <!-- Additional rows for other cars -->
+        </tbody>
+    </table>
+</div>
+{% endblock %}

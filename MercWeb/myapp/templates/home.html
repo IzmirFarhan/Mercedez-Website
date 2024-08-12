@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .section-top, .section-left, .section-middle {
+        background-color: #002C54; /* Main dark blue for section background */
+        padding: 20px;
+        border-radius: 5px;
+        color: #FDF6F6; /* Light color for text */
+        margin: 10px;
+        width: 100%;
+    }
+    .section-top {
+        width: 100%; /* Full-width for top section */
+    }
+    .section-left, .section-middle {
+        width: 45%; /* Half-width for left and middle sections */
+    }
+    .section-top h2, .section-left h2, .section-middle h2 {
+        color: #C5001A; /* Red for section titles */
+    }
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .search-bar input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    .search-bar button {
+        padding: 10px;
+        background-color: #C5001A; /* Red color for button */
+        color: #FDF6F6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<h1>Welcome to the Home Page</h1>
+<div class="container">
+    <div class="section-top">
+        <h2>Search for Cars</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a Mercedes model...">
+            <button>Search</button>
+        </div>
+    </div>
+    <div class="section-left">
+        <h2>Filter by Model</h2>
+        <p>Select the Mercedes model you're interested in:</p>
+        <ul>
+            <li><a href="#">A-Class</a></li>
+            <li><a href="#">C-Class</a></li>
+            <li><a href="#">E-Class</a></li>
+            <li><a href="#">S-Class</a></li>
+        </ul>
+    </div>
+    <div class="section-middle">
+        <h2>Featured Cars</h2>
+        <p>Check out our latest featured models.</p>
+        <!-- Additional content could go here -->
+    </div>
+</div>
+{% endblock %}

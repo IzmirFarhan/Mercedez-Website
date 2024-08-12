@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+
+{% block title %}Testimonials{% endblock %}
+
+{% block content %}
+<style>
+    .testimonial-container {
+        padding: 40px;
+        background-color: #FDF6F6; /* Light background */
+        border-radius: 5px;
+    }
+    .testimonial-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .testimonial-header h1 {
+        color: #002C54; /* Dark blue */
+        margin-bottom: 10px;
+    }
+    .testimonial-header p {
+        color: #333; /* Dark grey */
+        font-size: 1.1em;
+    }
+    .testimonial-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .testimonial-item {
+        background-color: #F2F2F2; /* Light grey for background */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial-item blockquote {
+        margin: 0;
+        font-style: italic;
+        color: #333; /* Dark grey for text */
+    }
+    .testimonial-item p {
+        margin-top: 10px;
+        color: #C5001A; /* Red for the name */
+        font-weight: bold;
+    }
+</style>
+
+<div class="testimonial-container">
+    <div class="testimonial-header">
+        <h1>What Our Customers Say</h1>
+        <p>Read testimonials from our satisfied customers who have experienced our exceptional service and quality.</p>
+    </div>
+    
+    <div class="testimonial-list">
+        <div class="testimonial-item">
+            <blockquote>
+                "The service I received was outstanding! The team went above and beyond to ensure my car was in perfect condition. Highly recommend!"
+            </blockquote>
+            <p>- Jane Doe</p>
+        </div>
+
+        <div class="testimonial-item">
+            <blockquote>
+                "I had a great experience purchasing my car here. The staff were knowledgeable and made the whole process smooth and enjoyable."
+            </blockquote>
+            <p>- John Smith</p>
+        </div>
+
+        <div class="testimonial-item">
+            <blockquote>
+                "Excellent customer service and top-notch repairs. They really care about their customers and their vehicles. Will definitely come back!"
+            </blockquote>
+            <p>- Emily Johnson</p>
+        </div>
+
+        <!-- Add more testimonials as needed -->
+    </div>
+</div>
+{% endblock %}
